@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Bandhan Event – We Create, You Celebrate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Poppins', sans-serif; line-height:1.6; color:#333; background:#fffaf5; }
+    nav { position:fixed; top:0; width:100%; z-index:100; background:rgba(255,255,255,0.9); backdrop-filter: blur(10px); display:flex; justify-content:space-between; align-items:center; padding:15px 30px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+    .logo { font-family:'Great Vibes', cursive; font-size:1.8rem; color:#b38b59; }
+    nav a { margin:0 15px; text-decoration:none; color:#555; font-weight:500; transition:color 0.3s;}
+    nav a:hover { color:#b38b59; }
+    .btn-primary { background:#b38b59; color:#fff; border:none; padding:10px 20px; border-radius:25px; cursor:pointer; transition:0.3s; font-weight:600;}
+    .btn-primary:hover { background:#a47743; }
+    header { min-height:100vh; background:url('https://images.unsplash.com/photo-1530023367847-a683933f417c?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat; position:relative; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; }
+    header::before { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+    header .hero { position:relative; z-index:1; padding:0 20px; }
+    header h1 { font-family:'Great Vibes', cursive; font-size:3.5rem; margin-bottom:20px;}
+    header p { font-size:1.3rem; margin-bottom:30px;}
+    section { padding:80px 20px; max-width:1100px; margin:auto; }
+    section h2 { font-family:'Great Vibes', cursive; font-size:2.8rem; color:#b38b59; margin-bottom:20px; text-align:center; }
+    #about p { font-size:1.1rem; max-width:800px; margin: auto; margin-bottom:20px; text-align:center; }
+    .services-grid { display:grid; gap:30px; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); margin-top:40px; }
+    .service-box { background:#fff; border-radius:10px; padding:30px 20px; box-shadow:0 2px 12px rgba(0,0,0,0.1); text-align:center; transition:transform 0.3s; }
+    .service-box:hover { transform: translateY(-8px); }
+    .service-icon { font-size:2.5rem; margin-bottom:15px; }
+    .gallery { display:flex; flex-wrap:wrap; gap:15px; margin-top:30px; justify-content:center; }
+    .gallery img { width:calc(33% - 10px); border-radius:8px; object-fit:cover; box-shadow:0 2px 12px rgba(0,0,0,0.1); transition:opacity 0.3s; }
+    .gallery img:hover { opacity:0.8; }
+    #contact p { font-size:1.1rem; margin:12px 0; text-align:center;}
+    footer { background:#333; color:#fff; padding:30px; text-align:center; font-size:0.9rem; }
+    footer a { color:#fcd5b0; text-decoration:none; }
+    @media(max-width:768px){
+      header h1 { font-size:2.8rem; }
+      .gallery img { width:calc(50% - 10px); }
+    }
+    @media(max-width:480px){
+      nav { flex-direction: column; gap:10px; }
+      .gallery img { width:100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Bandhan Event</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+    <button class="btn-primary" onclick="scrollToContact()">Get a Quote</button>
+  </div>
+</nav>
+
+<header>
+  <div class="hero">
+    <h1>Bandhan Event 💍</h1>
+    <p>We create, you celebrate – where wedding dreams come alive.</p>
+    <button class="btn-primary" onclick="scrollToContact()">Let’s Talk</button>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Led by <strong>Kapil Nagar</strong>, Bandhan Event is your trusted wedding & event planner based in Jaipur, Rajasthan. With a passion for elegance and unmatched attention to detail, we design celebrations that leave a lasting impression.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services-grid">
+    <div class="service-box"><div class="service-icon">🎊</div><h3>Wedding Planning</h3><p>Complete coordination and seamless execution.</p></div>
+    <div class="service-box"><div class="service-icon">🎨</div><h3>Venue Decor</h3><p>Themed setups that reflect your vision.</p></div>
+    <div class="service-box"><div class="service-icon">🍽️</div><h3>Catering</h3><p>Custom menus with quality and taste.</p></div>
+    <div class="service-box"><div class="service-icon">📸</div><h3>Photo & Video</h3><p>Capturing moments with artistry and soul.</p></div>
+    <div class="service-box"><div class="service-icon">🎤</div><h3>Entertainment</h3><p>Live acts, DJ, and memorable experiences.</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1543248939-ef62f0dc4a07" alt="decor">
+    <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6" alt="stage">
+    <img src="https://images.unsplash.com/photo-1603574670812-d24560880210" alt="catering">
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>📍 Khanpur, Rajasthan</p>
+  <p>📧 <a href="mailto:eventkapil96@gmail.com">eventkapil96@gmail.com</a></p>
+  <p>📱 +91‑702397‑4759</p>
+  <p>📸 <a href="https://www.instagram.com/bandhan_wedding_n_event?igsh=MTdoOWxvOXdveDlzNw==" target="_blank">@bandhan_wedding_n_event</a></p>
+  <button class="btn-primary" onclick="alert('Thank you! We will contact you soon 😊')">Book Now</button>
+</section>
+
+<footer>
+  © 2025 Bandhan Event | Designed with ❤️ by Mayank Nagar • Follow us on <a href="https://www.instagram.com/mayank__nagarr?igsh=a3dqMGtyZ3h1cXB4" target="_blank">Instagram</a>
+</footer>
+
+<script>
+  function scrollToContact(){ document.querySelector('#contact').scrollIntoView({ behavior:'smooth' }); }
+</script>
+
+</body>
+</html>
